@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fusslp Blog | Buku Tamu</title>
+
+    <!-- Favicon di generate otomatis pake tool online, googling ya -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/ikon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/assets/img/ikon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/img/ikon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/ikon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/img/ikon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/img/ikon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/img/ikon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/ikon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/ikon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/ikon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/ikon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/img/ikon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/ikon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/img/ikon/manifest.json">
+
+    <meta name="msapplication-TileColor" content="#FFDF6E">
+    <meta name="msapplication-TileImage" content="/assets/img/ikon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#FFDF6E">
+
+    <!-- Import Bootstrap 4, need update from npm -->
+    <link rel="stylesheet" href="/vendor/node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+    <!-- Kostum CSS -->
+    <link rel="stylesheet" href="/vendor/css/tema.css">
+
+    <!-- Impor FontAwesome 5 -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- Navigasi Bar Atas -->
+    <nav class="navbar navbar-expand-sm navbar-light fixed-top" style="background-color: #FFDF6E;">
+        <a class="navbar-brand judul" href="/">fusslp</a>
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+            aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"><i
+                class="fas fa-hamburger fa-lg"></i></button>
+        <div class="collapse navbar-collapse pt-2" id="collapsibleNavId">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="tentang.html">Tentang</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://soundcloud.com/akpt08" target="_blank">Podcast</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="bukutamu.html">Buku Tamu</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0 mr-0">
+                <input class="form-control mr-sm-2 transparant-form" type="text" placeholder="Search">
+                <button class="btn btn-outline-putih my-2 my-sm-0" type="submit">Search</button>
+            </form>
+            <ul class="navbar-nav menulogin ml-1 mt-2 mt-lg-0 mr-2">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">Akun</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownId">
+                        <a class="dropdown-item" href="/akun/masuk.html">Masuk</a>
+                        <a class="dropdown-item" href="/akun/daftar.html">Daftar</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header gede -->
+    <header class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 ml-auto text-center kepalablog py-3 my-5"
+                style="background-image: url(/assets/img/bg-header2.jpg);background-position: bottom right;background-size: cover;">
+                <div class="kontenkepala m-5 mx-auto">
+                    <h1 class="text-bold display-2 mb-0">Hi</h1>
+                    <hr class="mt-0">
+                    <h4 class="my-1 py-1 mx-auto">Welcome to my blog.</h4>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- isi buku tamu -->
+    <div class="container-fluid ngeblog">
+        <div class="row">
+            <!-- Disini form nya -->
+            <div class="col-md-3 ml-auto mr-0">
+                <h1 class="text-bold">Kenneth's Guest Book</h1>
+                <p>Thanks for checking this out. This is my guestbook. Feel free to sign it so I can see you were here.
+                </p>
+                <hr>
+                <h3>Sign The Guestbook!</h3>
+                <form action="javascript:void(0);" method="POST" id="formgb">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="nama" id="nama" placeholder="Nama Depan" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" name="email" id="email" placeholder="Alamat Surel"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="pesan" class="form-control" id="pesan" cols="30" rows="10"
+                            placeholder="Masukkan pesan Anda disini" required></textarea>
+                    </div>
+                    <input type="submit" class="btn btn-outline-putih px-2" value="Kirim" id="kirimgb">
+                    <input type="reset" class="btn btn-outline-putih px-2" value="Ketik ulang form" id="resetgb">
+                </form>
+            </div>
+
+            <!-- Disini komentar buku tamunya/entri buku tamunya. Ini kodenya sama aja -->
+            <!-- Ini entri pertama -->
+            <div class="col-md-4 menulogin ml-0 mr-auto">
+                <div class="entry mb-2">
+                    <div class="row m-2">
+                        <div class="col-md-5">
+                            <img class="img-fluid d-block rounded-circle mx-auto text-center"
+                                src="/assets/img/2.jpg">
+                            <div class="d-flex align-items-center justify-content-between my-2">
+                                <a href="">
+                                    <i class="d-block fab fa-facebook fa-lg text-muted p-3"></i>
+                                </a>
+                                <a href="">
+                                    <i class="d-block fab fa-instagram fa-lg text-muted p-3"></i>
+                                </a>
+                                <a href="">
+                                    <i class="d-block fab fa-twitter fa-lg text-muted p-3"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-7 pt-2">
+                            <h2 class="penulis">Yudhi</h2>
+                            <p class="text-small"><span class="tanggal">Sabtu, 30 Maret 2018 1:43 PM</span></p>
+                            <div class="entry-text">
+                                <p>Yo wassup, blog lo aneh cuyy dasar lo gila.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+
+                <!-- ini entri kedua -->
+                <div class="entry mb-2">
+                    <div class="row m-2">
+                        <div class="col-md-5">
+                            <img class="img-fluid d-block rounded-circle mx-auto text-center"
+                                src="/assets/img/4.jpg">
+                            <div class="d-flex align-items-center justify-content-between my-2">
+                                <a href="">
+                                    <i class="d-block fab fa-facebook fa-lg text-muted p-3"></i>
+                                </a>
+                                <a href="">
+                                    <i class="d-block fab fa-instagram fa-lg text-muted p-3"></i>
+                                </a>
+                                <a href="">
+                                    <i class="d-block fab fa-twitter fa-lg text-muted p-3"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-7 pt-2">
+                            <h2 class="penulis">Iqbal</h2>
+                            <p class="text-small"><span class="tanggal">Sabtu, 30 Maret 2018 2:43 PM</span></p>
+                            <div class="entry-text">
+                                <p>Anjay anjay apaan pos nya gak guna njir.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+
+                <!-- Ini entri ketiga -->
+                <div class="entry mb-2">
+                    <div class="row m-2">
+                        <div class="col-md-5">
+                            <img class="img-fluid d-block rounded-circle mx-auto text-center"
+                                src="/assets/img/3.jpg">
+                            <div class="d-flex align-items-center justify-content-between my-2">
+                                <a href="">
+                                    <i class="d-block fab fa-facebook fa-lg text-muted p-3"></i>
+                                </a>
+                                <a href="">
+                                    <i class="d-block fab fa-instagram fa-lg text-muted p-3"></i>
+                                </a>
+                                <a href="">
+                                    <i class="d-block fab fa-twitter fa-lg text-muted p-3"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-7 pt-2">
+                            <h2 class="penulis">Gardion</h2>
+                            <p class="text-small"><span class="tanggal">Minggu, 31 Maret 2018 5:11 PM</span></p>
+                            <div class="entry-text">
+                                <p>Habis kuota gue cok anjir.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+
+                <!-- Ini entri keempat -->
+                <div class="entry mb-2">
+                    <div class="row m-2">
+                        <div class="col-md-5">
+                            <img class="img-fluid d-block rounded-circle mx-auto text-center"
+                                src="/assets/img/1.jpg">
+                            <div class="d-flex align-items-center justify-content-between my-2">
+                                <a href="">
+                                    <i class="d-block fab fa-facebook fa-lg text-muted p-3"></i>
+                                </a>
+                                <a href="">
+                                    <i class="d-block fab fa-instagram fa-lg text-muted p-3"></i>
+                                </a>
+                                <a href="">
+                                    <i class="d-block fab fa-twitter fa-lg text-muted p-3"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-7 pt-2">
+                            <h2 class="penulis">Mark</h2>
+                            <p class="text-small"><span class="tanggal">Minggu, 31 Maret 2018 6:02 PM</span></p>
+                            <div class="entry-text">
+                                <p>Gak ngerti aku apa yang diomonginnya. Bahasa apa itu cok, alien? wkwkwkwkwkwk</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+
+                <!-- Ini entri kelima -->
+                <div class="entry mb-2">
+                    <div class="row m-2">
+                        <div class="col-md-5">
+                            <img class="img-fluid d-block rounded-circle mx-auto text-center"
+                                src="/assets/img/5.jpg">
+                            <div class="d-flex align-items-center justify-content-between my-2">
+                                <a href="">
+                                    <i class="d-block fab fa-facebook fa-lg text-muted p-3"></i>
+                                </a>
+                                <a href="">
+                                    <i class="d-block fab fa-instagram fa-lg text-muted p-3"></i>
+                                </a>
+                                <a href="">
+                                    <i class="d-block fab fa-twitter fa-lg text-muted p-3"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-7 pt-2">
+                            <h2 class="penulis">Linda</h2>
+                            <p class="text-small"><span class="tanggal">Senin, 1 April 2018 3:02 PM</span></p>
+                            <div class="entry-text">
+                                <p>Coba yang betul kalo nulis apaan sih gak ngerti gue</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bagian kaki/footer -->
+    <footer>
+        <hr>
+        <div class="py-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-6 p-3">
+                        <h5> <b>Temukan Saya</b> </h5>
+                        <ul class="list-unstyled">
+                            <li> <a href="http://redcoffe.cf">Redcoffe</a> </li>
+                            <li> <a href="http://untitledsomeoneproject.tumblr.com">Ugly Geeky Duck</a> </li>
+                            <li> <a href="http://simonickalexs.tumblr.com">@simonickalexs</a> </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-6 p-3">
+                        <h5> <b>Informasi Bantuan</b> </h5>
+                        <ul class="list-unstyled">
+                            <li> <a href="halaman/faq">Pertanyaan Yang Sering Diajukan</a> </li>
+                            <li> <a href="halaman/produk">Daftar Produk Fusslp</a> </li>
+                            <li> <a href="halaman/tentang">Apa itu Fusslp?</a> </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 p-3">
+                        <h5> <b>Tentang</b> </h5>
+                        <p class="mb-0"> Fusslp blog adalah blog yang sangat tidak berfaedah dan tidak tahu apa tujuan diciptakannya ini. Yaa ini sih cuman tugas pak jamal aja sih sama buat tutorial anak-anaknya buat blog menggunakan bootstrap 4. Tetap cemungut yaaa sayy! ;) </p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 p-3">
+                        <h5> <b>Ikuti Saya</b> </h5>
+                        <div class="row">
+                            <div class="col-md-12 d-flex align-items-center justify-content-between my-2">
+                                <a href="http://fb.com/benscott28">
+                                    <i class="d-block fab fa-facebook text-muted fa-lg mr-2 anime-link"></i>
+                                </a>
+                                <a href="http://instagram.com/simonickalexs">
+                                    <i class="d-block fab fa-instagram text-muted fa-lg mx-2 anime-link"></i>
+                                </a>
+                                <a href="http://twitter.com/_ariffahmi">
+                                    <i class="d-block fab fa-twitter text-muted fa-lg ml-2 anime-link"></i>
+                                </a> </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <p class="mb-0 mt-2">&copy; RMPPL. All rights reserved</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+<script src="/vendor/node_modules/jquery/dist/jquery.min.js"></script>
+<script src="/vendor/node_modules/popper.js/dist/umd/popper.min.js"></script>
+<script src="/vendor/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
